@@ -10,15 +10,8 @@ def calculate_total_and_discount(items):
     return total
 
 def apply_discount_to_cart(cart):
-    # Calculate total price of items in the cart
-    total = sum(item.price_cents * item.qty for item in cart.items)
-
-    # Critical business rule duplicated here:
-    # 10% discount applied if total is above 50 NOK
-    if total > 5000:
-        total = int(total * 0.9)
-
-    return total
+    """Returns the total with the discount"""
+    return calculate_total_and_discount(cart.items)
 
 
 def generate_invoice(order):
