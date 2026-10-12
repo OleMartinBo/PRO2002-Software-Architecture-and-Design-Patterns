@@ -1,3 +1,14 @@
+"""Discount"""
+def calculate_total_and_discount(items):
+    """Sums the total items before discount"""
+    total = sum(item.price_cents * item.qty for item in items)
+
+    # 10% discount applied if total is above 5000
+    if total > 5000:
+        total = int(total * 0.9)
+
+    return total
+
 def apply_discount_to_cart(cart):
     # Calculate total price of items in the cart
     total = sum(item.price_cents * item.qty for item in cart.items)

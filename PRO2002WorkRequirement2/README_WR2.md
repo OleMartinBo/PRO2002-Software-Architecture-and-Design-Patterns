@@ -73,7 +73,8 @@ The relative indicators of Cyclomatic complexity and Maintainability index did n
 #### 4.1 Checking for problems
 1. The main issues found in `discount.py` is that the the exact same discount logic exist in two places.
 2. Changes has to be made both places, else system breaks and will cause inconsistencies. 
-3. Docstring and new line also highlighted by Pylint. 
+3. Docstring and new line also highlighted by Pylint.
+4. Comment states that 10% is applied after 50 NOK, but value is set to 5000 in code. Possible mistake
 
 **_Code metrics_**<br>
 Cyclomatic complexity (CC):<br>
