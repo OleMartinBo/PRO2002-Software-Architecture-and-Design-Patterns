@@ -58,18 +58,18 @@ The relative indicators of Cyclomatic complexity and Maintainability index did n
 ### 3.0 Order.py problems and improvements
 #### 3.1 Checking for problems
 1. The Single Responsibility: The `Order` class handle responsibilities for database persistence.The method of saving could be a area for separation of concerns rather than in the order class. 
-2. Open/Closed Principle (OCP): The current stat is hard to extend if the saving behavior needs to change. Adding e.g. subclasses of `save` would make it easier to extend without introducing new bugs. 
+2. Open/Closed Principle (OCP): The current state is hard to extend if the saving behavior needs to change. Adding e.g. subclasses of `save` could make it easier to extend without introducing new bugs. 
 3. Dependency Inversion Principle: The `Order` class should not depend the current `save`, but rather depend on a abstract class for saving orders. 
 4. Order_Id as "123" should not be hardcoded into the INSERT.
-5. 
+5. The order class is also dependent on the internal structure of User, meaning changes in User can affect the order class. 
 
-
-
-
-#### 3.2 Suggestion to fix problems
-1. 
-
-#### 3.3 The improvements i made and why
+#### 3.2 The improvements i would make and why, step by step
+1. I would move `save` to it own class that can handle storing of orders. This would follow the The Single Responsibility Principle, as the `Order` class no longer handles the SQL. 
+2. I recommend to implement an abstract orderRepository `orderRepository` class with a save() method, as seen in Module 1.5 in the course. This enables various saving methods to be implemented without modifying the `Order` class, which follows the Open/Closed Principle.
+3. Next I would make `Order` depend on a shared abstraction rather than a concrete database implementation. This follows Dependency Inversion Principle, allowing it to be more loosely coupled and easier to maintain. 
+4. I would also replace the hardcoded order id `123` with the `order_id`. This is because the order items should be connected to correct order instead of reusing the same id.
+5. Lastly, ...
+   
 
 ### 4.0 discount.py problems and improvements
 
