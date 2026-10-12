@@ -73,6 +73,7 @@ The relative indicators of Cyclomatic complexity and Maintainability index did n
 #### 4.1 Checking for problems
 1. The main issues found in `discount.py` is that the the exact same discount logic exist in two places.
 2. Changes has to be made both places, else system breaks and will cause inconsistencies. 
+3. Docstring and new line also highlighted by Pylint. 
 
 **_Code metrics_**<br>
 Cyclomatic complexity (CC):<br>
@@ -82,11 +83,13 @@ F 13:0 generate_invoice - A (3)<br>
 Maintainability index (MI):<br>
 discount.py - A (91.41)<br>
 
-Even thought the result is not to bad, these are not absolutes truths. <br>
+Even thought the results is not to bad, these are not absolutes truths. <br>
 However i found them useful to check before doing any work on the code.<br>
 
-#### 4.2 The improvements i would made and why
-
+#### 4.2 The improvements i made and why
+1. My first improvement is make a shared discount calculation.This ensures that the logic stays stable and easy to maintain 
+2. I will keep `apply_discount_to_cart`, but return the new separate calculation function for cart. Thereby both the cart and order can use the same calculation from a shared function. 
+3. Comment code and docstring where necessary. This has to be done when i refactor the code.  
 
 ### 5.0 process_order.py problems and improvements
 
