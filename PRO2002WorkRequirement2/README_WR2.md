@@ -65,13 +65,28 @@ The relative indicators of Cyclomatic complexity and Maintainability index did n
 
 #### 3.2 The improvements i would make and why, step by step
 1. I would move `save` to it own class that can handle storing of orders. This would follow the The Single Responsibility Principle, as the `Order` class no longer handles the SQL. 
-2. I recommend to implement an abstract orderRepository `orderRepository` class with a save() method, as seen in Module 1.5 in the course. This enables various saving methods to be implemented without modifying the `Order` class, which follows the Open/Closed Principle.
+2. I recommend to implement an abstract `orderRepository` class with a save() method, as seen in Module 1.5 in the course. This enables various saving methods to be implemented without modifying the `Order` class, which follows the Open/Closed Principle.
 3. Next I would make `Order` depend on a shared abstraction rather than a concrete database implementation. This follows Dependency Inversion Principle, allowing it to be more loosely coupled and easier to maintain. 
-4. I would also replace the hardcoded order id `123` with the `order_id`. This is because the order items should be connected to correct order instead of reusing the same id.
-5. Lastly, ...
+4. I would also replace the hardcoded order id `123` with the `order_id`. This is because the order items should be connected to the correct order instead of reusing the same id.
    
-
 ### 4.0 discount.py problems and improvements
+#### 4.1 Checking for problems
+1. The main issues found in `discount.py` is that the the exact same discount logic exist in two places.
+2. Changes has to be made both places, else system breaks and will cause inconsistencies. 
+
+**_Code metrics_**<br>
+Cyclomatic complexity (CC):<br>
+F 1:0 apply_discount_to_cart - A (3)<br>
+F 13:0 generate_invoice - A (3)<br>
+
+Maintainability index (MI):<br>
+discount.py - A (91.41)<br>
+
+Even thought the result is not to bad, these are not absolutes truths. <br>
+However i found them useful to check before doing any work on the code.<br>
+
+#### 4.2 The improvements i would made and why
+
 
 ### 5.0 process_order.py problems and improvements
 
