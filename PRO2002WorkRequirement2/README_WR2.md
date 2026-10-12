@@ -16,12 +16,22 @@ For the "tightly coupled Order class" and "the process_order method", use simple
 ## 1.0 Overall Short reflection
 
 ### 2.0 Converter.py problems and improvements
+#### 2.1 Problems
+1. Could have a more descriptive class as "Converter" is to generic.
+2. Method name is ok, but could benefit with either having a comment or new Method name.
+3. Better comments in the code for what the class do and what the math equations is.
 
-#### 2.1 Pylint problems
+From Pylint:<br>
 Missing module docstring `C0114:missing-module-docstring`<br>
 Missing class docstring `C0115:missing-class-docstring`<br>
 Missing function or method docstring `C0116:missing-function-docstring`<br>
 Final newline missing `C0304:missing-final-newline`<br>
+#### 2.2 Suggestion to fix problems
+1. Trace the Pylint suggestions to the problems
+2. Comment the code with small but descriptive comments.
+
+#### 2.3 The improvements i made and why
+1. 
 
 ### 3.0 Order.py problems and improvements
 
