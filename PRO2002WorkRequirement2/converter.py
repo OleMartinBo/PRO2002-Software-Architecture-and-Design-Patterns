@@ -12,6 +12,10 @@ class Converter:
 
 
 # Why such oddly specific numbers?!?
+# The numbers are specific for the math equation to convert Fahrenheit to Celsius
+
 # And why "5/9" twice?!?
+# The factor is (5/9) and the is offset (-32 * 5/9).
+# Therefore are both are used to to convert fahrenheit.
 c = Converter(5/9, -32 * 5/9)
 print(c.convert(212))
