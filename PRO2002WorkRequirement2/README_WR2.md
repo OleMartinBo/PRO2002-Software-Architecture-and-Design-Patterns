@@ -13,14 +13,20 @@ For each example, analyze what makes the code problematic and suggest concrete i
 
 For the "tightly coupled Order class" and "the process_order method", use simple placeholders/stubs, or just describe with comments or in the README how the code could be improved
 
-## Short reflection
+## 1.0 Overall Short reflection
 
-## 1.0 Explaination of the problems
+### 2.0 Converter.py problems and improvements
 
+#### 2.1 Pylint problems
+Missing module docstring `C0114:missing-module-docstring`<br>
+Missing class docstring `C0115:missing-class-docstring`<br>
+Missing function or method docstring `C0116:missing-function-docstring`<br>
+Final newline missing `C0304:missing-final-newline`<br>
 
-## 2.0 Explaining the improvements
+### 3.0 Order.py problems and improvements
 
-### 2.1 The improvements I made
-### 2.2 Why I made the improvements
+### 4.0 discount.py problems and improvements
+
+### 5.0 process_order.py problems and improvements
 
 
