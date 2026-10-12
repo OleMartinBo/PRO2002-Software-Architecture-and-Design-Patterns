@@ -16,19 +16,32 @@ For the "tightly coupled Order class" and "the process_order method", use simple
 ## 1.0 Overall Short reflection
 
 ### 2.0 Converter.py problems and improvements
-#### 2.1 Problems
-1. Could have a more descriptive class as "Converter" is to generic.
-2. Method name is ok, but could benefit with either having a comment or new Method name.
-3. Better comments in the code for what the class do and what the math equations is.
+#### 2.1 Checking for problems
+1. The class name `Converter` is generic, could benefit from a more descriptive class name.
+2. The Method name is reasonable, but could benefit having a comment. 
+3. The math equation to convert Fahrenheit to Celsius needs better comments and is difficult to understand.
 
-From Pylint:<br>
-Missing module docstring `C0114:missing-module-docstring`<br>
-Missing class docstring `C0115:missing-class-docstring`<br>
-Missing function or method docstring `C0116:missing-function-docstring`<br>
-Final newline missing `C0304:missing-final-newline`<br>
+**_Code metrics_**<br>
+Cyclomatic complexity (CC):<br>
+C 3:0 Converter - A (2)<br>
+M 5:4 Converter.__init__ - A (1)<br>
+M 9:4 Converter.convert - A (1)<br>
+
+Maintainability index (MI):<br>
+converter.py - A (92.20) <br>
+
+The relative indicators of Cyclomatic complexity and Maintainability index did not indicate any long term issues.
+
+**_From Pylint:_**<br>
+`C0114:missing-module-docstring`<br>
+`C0115:missing-class-docstring`<br>
+`C0116:missing-function-docstring`<br>
+`C0304:missing-final-newline`<br>
+
 #### 2.2 Suggestion to fix problems
-1. Trace the Pylint suggestions to the problems
-2. Comment the code with small but descriptive comments.
+1. Fix the Pylint warnings in the terminal by adding the docstring and final newline to the module.
+2. Add short but descriptive comment where necessary to explain the code.
+3. Possibly change class name to a more descriptive class name.
 
 #### 2.3 The improvements i made and why
 1. 
