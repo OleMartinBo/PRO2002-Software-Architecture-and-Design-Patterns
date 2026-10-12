@@ -20,6 +20,7 @@ For the "tightly coupled Order class" and "the process_order method", use simple
 1. The class name `Converter` is generic, could benefit from a more descriptive class name.
 2. The Method name is reasonable, but could benefit having a comment. 
 3. The math equation to convert Fahrenheit to Celsius needs better comments and is difficult to understand.
+4. The method and math equation to convert is correct, but could be simplified for better readability.
 
 **_Code metrics_**<br>
 Cyclomatic complexity (CC):<br>
@@ -42,6 +43,7 @@ The relative indicators of Cyclomatic complexity and Maintainability index did n
 1. Fix the Pylint warnings in the terminal by adding the docstring and final newline to the module.
 2. Add short but descriptive comment where necessary to explain the code.
 3. Possibly change class name to a more descriptive class name.
+4. Simplify method and math equation for better readability
 
 #### 2.3 The improvements i made and why
 1. 

@@ -1,5 +1,5 @@
 # What is this "Converter" converting?!?
-"""This "Converter" module is converting Fahrenheit-to-Celsius"""
+"""This "Converter" is converting Fahrenheit-to-Celsius"""
 class Converter:
     """Class representing a Fahrenheit-to-Celsius Converter"""
     def __init__(self, factor, offset):
