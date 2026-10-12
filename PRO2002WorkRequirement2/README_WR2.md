@@ -56,6 +56,20 @@ The relative indicators of Cyclomatic complexity and Maintainability index did n
 4. Improved the formula for the Fahrenheit to Celsius for better readability and simplicity.
 
 ### 3.0 Order.py problems and improvements
+#### 3.1 Checking for problems
+1. The Single Responsibility: The `Order` class handle responsibilities for database persistence.The method of saving could be a area for separation of concerns rather than in the order class. 
+2. Open/Closed Principle (OCP): The current stat is hard to extend if the saving behavior needs to change. Adding e.g. subclasses of `save` would make it easier to extend without introducing new bugs. 
+3. Dependency Inversion Principle: The `Order` class should not depend the current `save`, but rather depend on a abstract class for saving orders. 
+4. Order_Id as "123" should not be hardcoded into the INSERT.
+5. 
+
+
+
+
+#### 3.2 Suggestion to fix problems
+1. 
+
+#### 3.3 The improvements i made and why
 
 ### 4.0 discount.py problems and improvements
 
