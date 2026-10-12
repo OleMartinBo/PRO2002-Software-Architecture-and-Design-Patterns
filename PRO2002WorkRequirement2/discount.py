@@ -15,17 +15,12 @@ def apply_discount_to_cart(cart):
 
 
 def generate_invoice(order):
+    """Generating invoice for the order"""
     # Format invoice header and customer info
     invoice = f"Invoice for order {order.id}\nCustomer: {order.user_email}\n"
 
     # Calculate total price of items in the order
-    total = sum(item.price_cents * item.qty for item in order.items)
-
-    # Same discount rule duplicated again:
-    # Appears here in addition to the cart logic above
-    # What happens if we decide to change the logic here; say give discounts to orders above a lesser total?
-    if total > 5000:
-        total = int(total * 0.9)
+    total = calculate_total_and_discount(order.items)
 
     invoice += f"Total (after discount if applicable): {total} cents"
     return invoice
