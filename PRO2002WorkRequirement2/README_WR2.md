@@ -119,4 +119,5 @@ Maintainability index (MI):<br>
 process_order.py - A (86.55)<br>
 
 #### 5.2 The improvements i would make and why, step by step
-1. 
+1. I would separate the logic for Calculate total and Apply discount into functions. This is a refactor approach called Extract Method and makes it more readable (refactoring.guru)
+2. 
