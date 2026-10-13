@@ -64,6 +64,14 @@ The relative indicators of Cyclomatic complexity and Maintainability index did n
 5. The order class is also dependent on the internal structure of User, meaning changes in User can affect the order class. 
 
 **_Code metrics_**<br>
+Cyclomatic complexity (CC):<br>
+C 1:0 Order - A (3)<br>
+M 13:4 Order.save - A (2)<br>
+M 2:4 Order.__init__ - A (1)<br>
+Average complexity: A (2.0)<br>
+
+Maintainability index (MI):<br>
+order.py - A (100.00)<br>
 
 #### 3.2 The improvements i would make and why, step by step
 1. I would move `save` to it own class that can handle storing of orders. This would follow the The Single Responsibility Principle, as the `Order` class no longer handles the SQL. 
@@ -103,7 +111,12 @@ However i found them useful to check before doing any work on the code.<br>
 5. Discount can also be many forms as of now, but not clearly explained in the code what the difference is.
 
 **_Code metrics_**<br>
+Cyclomatic complexity (CC):<br>
+F 4:0 process_order - A (5)<br>
+Average complexity: A (5.0)<br> 
 
+Maintainability index (MI):<br>
+process_order.py - A (86.55)<br>
 
 #### 5.2 The improvements i would make and why, step by step
 1. 
