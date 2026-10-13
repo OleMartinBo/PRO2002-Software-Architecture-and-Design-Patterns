@@ -63,6 +63,8 @@ The relative indicators of Cyclomatic complexity and Maintainability index did n
 4. Order_Id as "123" should not be hardcoded into the INSERT.
 5. The order class is also dependent on the internal structure of User, meaning changes in User can affect the order class. 
 
+**_Code metrics_**<br>
+
 #### 3.2 The improvements i would make and why, step by step
 1. I would move `save` to it own class that can handle storing of orders. This would follow the The Single Responsibility Principle, as the `Order` class no longer handles the SQL. 
 2. I recommend to implement an abstract `orderRepository` class with a save() method, as seen in Module 1.5 in the course. This enables various saving methods to be implemented without modifying the `Order` class, which follows the Open/Closed Principle.
@@ -93,5 +95,15 @@ However i found them useful to check before doing any work on the code.<br>
 3. Comment code and docstring where necessary. This has to be done when i refactor the code.  
 
 ### 5.0 process_order.py problems and improvements
+#### 5.1 Checking for problems
+1. The method have multiple concerns and the readability of the code is difficult.
+2. The system can become unmanageable if more notifications and discounts is added. 
+3. Testing can be difficult as it is one long method and takes the whole order process from start to finish.
+4. Single Responsibility Principle is not followed. Database and notification could be separate concerns. 
+5. Discount can also be many forms as of now, but not clearly explained in the code what the difference is.
+
+**_Code metrics_**<br>
 
 
+#### 5.2 The improvements i would make and why, step by step
+1. 
