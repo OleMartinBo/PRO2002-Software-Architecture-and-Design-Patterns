@@ -14,6 +14,11 @@ For each example, analyze what makes the code problematic and suggest concrete i
 For the "tightly coupled Order class" and "the process_order method", use simple placeholders/stubs, or just describe with comments or in the README how the code could be improved
 
 ## 1.0 Overall Short reflection
+Overall i found the process_order method and the tightly coupled Order class most challenging. For both of these challenges I often found myself going back to reading the OOP and SOLID principles. However, when I found an possible solution I always found myself struggling to communicate what i wanted to do. Further, I also was sometimes unsure if the proposed improvements was how I should confront the problems. I think for me, the reason i found these to most problematic is because I got to caught up trying to follow the principles too much. I should have rather focused more on systemically and incrementally fixing small but valuable code. 
+In the end, the learning experience was very good on these two problems. I got to go back to the course material and apply the knowledge I got to the best of my ability. <br>
+
+
+Below is information on each problem for WR2 --><br>
 
 ### 2.0 Converter.py problems and improvements
 #### 2.1 Checking for problems
