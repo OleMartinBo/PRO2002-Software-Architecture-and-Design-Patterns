@@ -120,4 +120,7 @@ process_order.py - A (86.55)<br>
 
 #### 5.2 The improvements i would make and why, step by step
 1. I would separate the logic for Calculate total and Apply discount into functions. This is a refactor approach called Extract Method and makes it more readable (refactoring.guru)
-2. 
+2. The magic numbers could be replaced with symbolic constant. This could be beneficial as the number get a documented meaning for the value in a human readable name (refactoring.guru). 
+
+
+3. NOT SURE YET! Discount code use the OOP principle of polymorphism
