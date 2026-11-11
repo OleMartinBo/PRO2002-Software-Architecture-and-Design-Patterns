@@ -25,6 +25,24 @@ This sections explains the setup and how to use the application.
 ### How to run the test
 
 ### How to run the API locally (without Docker)
+1. Open the terminal (CMD) in VS Code and navigate to the project root folder "PRO2002WorkRequirement4".
+`````
+cd PRO2002WorkRequirement4
+`````
+2. Start the Flask application with the command below in the terminal. 
+`````
+flask run
+`````
+3. When the Flask server is running, follow the link in the terminal or copy the URL below into the browser.
+`````
+http://127.0.0.1:5000/health
+`````
+4. The endpoint will return the HTTP status code and JSON response. 
+`````
+{
+  "Status": "ok"
+}
+`````
 
 ### How to build and run the container
 
