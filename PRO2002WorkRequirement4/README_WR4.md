@@ -29,25 +29,24 @@ This sections explains the setup and how to use the application.
 ### How to build and run the container
 
 ### A brief explanation of the project structure
-Three layer architecture (sub to change)
+Three layer architecture (Note! Changed as this was not necessary for one simple endpoint)
 
 `````
 PRO2002WorkRequirement4/
 |_health_api/
-  |__models/
-  |   |__
-  |__routes/
-  |   |__
-  |__services/
-  |   |__
-  |__types/
-  |   |__
-  |__models/
+| |__routes/
+|    |__init__.py
+|    |_health_route.py
 |_testing/
-  |__test.py
+| |__init__.py
+| |__test.py
+|__init__.py
 |_app.py
+|_README_WR4.md
+|_requirements.txt
 `````
 
 #### Sources (Remove later, keep during development)
 https://flask.palletsprojects.com/en/stable/changes/
 https://devguide.python.org/versions/ 
+https://flask.palletsprojects.com/en/stable/testing/#sending-requests-with-the-test-client
