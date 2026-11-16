@@ -23,6 +23,15 @@ This sections explains the setup and how to use the application.
 ### What the application does
 
 ### How to run the test
+1. Open the terminal (CMD) in VS Code and navigate to the folder "PRO2002WorkRequirement4/testing".
+`````
+cd PRO2002WorkRequirement4/testing
+`````
+2. Start the automated test with the command below in the terminal. 
+`````
+pytest
+`````
+
 
 ### How to run the API locally (without Docker)
 1. Open the terminal (CMD) in VS Code and navigate to the project root folder "PRO2002WorkRequirement4".
@@ -38,16 +47,28 @@ flask run
 http://127.0.0.1:5000/health
 `````
 4. The endpoint will return the HTTP status code and JSON response. 
-`````
-{
-  "Status": "ok"
-}
-`````
+`````{"Status": "ok"}`````
+
+##### Thunder client testing:
+1. Open or install Thunder client
+2. Press "New Request"
+3. Use the "GET" method and paste in the the url below. 
+4. `````http://127.0.0.1:5000/health`````
+5. Press "send"
+6. The endpoint will return the HTTP status code and JSON response. 
+`````{"Status": "ok"} and Status: 200 OK`````
 
 ### How to build and run the container
 
 ### A brief explanation of the project structure
 Three layer architecture (Note! Changed as this was not necessary for one simple endpoint)
+
+Scope and Constraints
+
+No database or external services required
+No authentication required
+Keep the project small and focused.
+
 
 `````
 PRO2002WorkRequirement4/

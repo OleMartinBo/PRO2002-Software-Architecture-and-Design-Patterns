@@ -14,8 +14,3 @@ def create_app() -> Flask:
 
 # The application instance
 app = create_app()
-
-# Direct local run
-# "flask_app.run(debug=True)" enables live reloading
-#if __name__ == '__main__':
-#    app.run(debug=True)
