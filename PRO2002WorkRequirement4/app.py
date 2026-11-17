@@ -1,6 +1,6 @@
 """Flask application for WR4"""
 from flask import Flask
-from PRO2002WorkRequirement4.health_api.routes.health_route import health_bp
+from .health_api.routes.health_route import health_bp
 
 def create_app() -> Flask:
     """Creates a new Flask application instance"""
