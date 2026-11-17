@@ -13,5 +13,5 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copies application code into the image
 COPY . ./PRO2002WorkRequirement4/
 
-#Defines how the application starts
+# Defines how the application starts
 CMD ["python", "-m", "flask", "--app", "PRO2002WorkRequirement4.app", "run", "--host=0.0.0.0"]
